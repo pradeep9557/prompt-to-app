@@ -1597,6 +1597,16 @@ app.on('window-all-closed', () => {
               width: '100%',
               borderBottom: '1px solid #333'
             }}>
+              <Typography variant="caption" sx={{ 
+                color: '#fff',
+                fontSize: '14px',
+                fontWeight: 'bold',
+                minWidth: '120px',
+                borderRight: '1px solid #333',
+                pr: 2
+              }}>
+                Generated Files
+              </Typography>
               <Box sx={{ 
                 display: 'flex', 
                 gap: 1,
@@ -1672,8 +1682,22 @@ app.on('window-all-closed', () => {
                 width: '50%',
                 height: '100%',
                 display: 'flex',
+                flexDirection: 'column',
                 overflow: 'hidden'
               }}>
+                <Box sx={{
+                  p: 1,
+                  backgroundColor: '#1e1e1e',
+                  color: '#fff',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 1,
+                  borderBottom: '1px solid #333'
+                }}>
+                  <Typography variant="caption" sx={{ color: '#fff',fontSize: '20px' }}>
+                    Generated Code
+                  </Typography>
+                </Box>
                 <Editor
                   height="100%"
                   defaultLanguage="javascript"
@@ -1724,10 +1748,11 @@ app.on('window-all-closed', () => {
                   color: '#fff',
                   display: 'flex',
                   alignItems: 'center',
+                  justifyContent: 'space-between',
                   gap: 1,
                   borderBottom: '1px solid #333'
                 }}>
-                  <Typography variant="caption" sx={{ color: '#fff' }}>
+                  <Typography variant="caption" sx={{ color: '#fff',fontSize: '20px' }}>
                     Preview
                   </Typography>
                   <Tooltip title="Refresh Preview">
